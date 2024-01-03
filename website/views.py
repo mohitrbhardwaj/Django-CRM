@@ -47,3 +47,12 @@ def signup_user(request):
         return render(request, 'signup.html', {'form': form})
 
     return render(request, 'signup.html', {'form': form})
+
+def user_record(request, pk):
+    if request.user.is_authenticated:
+        # Look up records
+        user_record = Record.objects.get(id=pk)
+        return render(request, 'record.html', {'user_record': user_record})
+    else:
+        messages.success(request, "You must be logged in to access user records")
+        return redirect('home')
