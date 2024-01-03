@@ -10,7 +10,6 @@
         <h1> Login </h1>
         <form method="POST" action="{% url 'home' %}">
             {% csrf_token %}
-            <form>
                 </br>
                 <div class="mb-3">
                 {% comment %} <label for="exampleInputEmail1" class="form-label">Email address</label> {% endcomment %}
@@ -26,7 +25,6 @@
                 <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div> {% endcomment %}
                 <button type="submit" class="btn btn-primary">Login</button>
-            </form>
         </form>
     {% endif %}
 </div>
