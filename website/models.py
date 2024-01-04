@@ -9,7 +9,7 @@ class Record(models.Model):
     state = models.CharField(max_length=30)
     zipcode = models.CharField(max_length=10)
     email = models.CharField(max_length=100)
-    phone_num = models.CharField(max_length=15)
+    phone = models.CharField(max_length=15)
     address = models.CharField(max_length=150)
 
     def __str__(self):
